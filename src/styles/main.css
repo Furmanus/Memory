@@ -1,0 +1,53 @@
+html{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    padding: 0 150px;
+    margin: 0;
+    background-color: #1A1A1D;
+    overflow: hidden;
+}
+#app{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.full-width{
+    width: 100%;
+}
+.full-height{
+    height: 100%;
+}
+.flexbox{
+    display: flex;
+}
+.flexbox-vertical-center{
+    align-items: center;
+}
+.flexbox-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexbox-space-even{
+    justify-content: space-evenly;
+}
+.space-right{
+    margin-right: 5px;
+}
+.space-left{
+    margin-left: 5px;
+}
+/*
+COLOR SCHEMES
+#1A1A1D
+#4E4E50
+#6F2232
+#950740
+#C3073F
+ */

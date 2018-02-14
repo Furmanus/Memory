@@ -1,0 +1,31 @@
+.header{
+    width: 100%;
+    height: 20%;
+}
+.button-holder{
+    height: 30%;
+    width: 50%;
+    flex-direction: row;
+    margin-left: 5px;
+}
+.button{
+    color: snow;
+    width: 100px;
+    height: 32px;
+    background-color: #4E4E50;
+    border: 2px solid;
+    border-color: #6F2232;
+    border-radius: 15px;
+    margin-right: 4px;
+}
+.timer-container{
+    font-weight: bold;
+    font-size: 20px;
+    color: snow;
+}
+.counter-container{
+    color: snow;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+}
