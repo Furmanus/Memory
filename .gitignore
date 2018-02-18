@@ -1,5 +1,5 @@
 node_modules
-dist
+src
 .idea
 .git
 npm-debug.log.2396680424
