@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { defaultIcon } from '../constants/icons'
+import { defaultIcon } from '../constants/icons';
 
 export class Piece extends React.PureComponent{
 
@@ -9,7 +9,7 @@ export class Piece extends React.PureComponent{
             isRevealed,
             isTemporarilyRevealed,
             onClick,
-            icon
+            icon,
         } = this.props;
         const iconClassName = isRevealed || isTemporarilyRevealed ? icon : defaultIcon;
         const colouClassName = isRevealed || isTemporarilyRevealed ? 'snowColor' : 'grayColor';
@@ -17,7 +17,8 @@ export class Piece extends React.PureComponent{
         return (
             <div className='piece flexbox-center' onClick={onClick}>
                 <i className={`${iconClassName} ${colouClassName}`}/>
-            </div>);
+            </div>
+        );
     }
 }
 

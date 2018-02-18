@@ -1,0 +1,24 @@
+.modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 360px;
+    height: 360px;
+    z-index: 2;
+    border: 3px solid #6F2232;
+    border-radius: 10px;
+    background-color: gray;
+    padding: 0 10px;
+}
+.modal .modal-text{
+    text-align: center;
+    font-size: 24px;
+    color: snow;
+}
+.modal button{
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+}

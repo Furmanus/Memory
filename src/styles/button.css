@@ -1,0 +1,20 @@
+.button{
+    color: snow;
+    width: 100px;
+    height: 32px;
+    background-color: #4E4E50;
+    border: 2px solid;
+    border-color: #6F2232;
+    border-radius: 15px;
+    margin-right: 4px;
+    outline: none;
+}
+.button:disabled{
+    opacity: 0.2;
+}
+.button:hover{
+    border-color: #C3073F;
+}
+.button:active{
+    border-style: inset;
+}

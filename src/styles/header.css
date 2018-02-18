@@ -7,16 +7,7 @@
     width: 50%;
     flex-direction: row;
     margin-left: 5px;
-}
-.button{
-    color: snow;
-    width: 100px;
-    height: 32px;
-    background-color: #4E4E50;
-    border: 2px solid;
-    border-color: #6F2232;
-    border-radius: 15px;
-    margin-right: 4px;
+    padding: 0 20px;
 }
 .timer-container{
     font-weight: bold;

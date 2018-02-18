@@ -1,0 +1,1 @@
+Memory match game written in JavaScript with usage of ReactJS and Redux.

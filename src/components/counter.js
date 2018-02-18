@@ -15,9 +15,9 @@ export class Counter extends React.PureComponent{
 
 Counter.propTypes = {
     counter: PropTypes.number
-}
+};
 
 Counter.defaultProps = {
     counter: 0
-}
+};
 

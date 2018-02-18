@@ -13,10 +13,11 @@ import { Counter } from '../components/counter';
 const mapStateToProps = state => {
 
     return {
-        gameStarted: state.gameStarted,
+        hasGameStarted: state.hasGameStarted,
         currentTime: state.currentTime,
-        timerId: state.timerId
-    }
+        timerId: state.timerId,
+        guessCounter: state.guessCounter
+    };
 };
 const mapDispatchToProps = dispatch => {
 
@@ -28,29 +29,30 @@ const mapDispatchToProps = dispatch => {
         onRetryClick: (timerId) => {
             dispatch(retryGame(timerId));
         },
-    }
+    };
 }
 
 class Header extends React.Component{
 
     render(){
         const {
-            gameStarted,
+            hasGameStarted,
             currentTime,
             onStartClick,
             onRetryClick,
-            timerId
+            timerId,
+            guessCounter
         } = this.props;
 
         return (
             <div className='header flexbox flexbox-vertical-center'>
-                <div className='button-holder flexbox-center'>
-                    <Button buttonText='Start' onClick={onStartClick} isDisabled={gameStarted}/>
-                    <Button buttonText='Retry' onClick={onRetryClick.bind(Header, timerId)} isDisabled={!gameStarted}/>
+                <div className='button-holder flexbox-center flex-end'>
+                    <Button buttonText='Start' onClick={onStartClick} isDisabled={hasGameStarted}/>
+                    <Button buttonText='Retry' onClick={onRetryClick.bind(Header, timerId)} isDisabled={!hasGameStarted}/>
                 </div>
-                <div className='button-holder flexbox-center flexbox'>
+                <div className='button-holder flexbox-center flex-start'>
                     <Timer time={currentTime}/>
-                    <Counter/>
+                    <Counter counter={100 - guessCounter}/>
                 </div>
             </div>
         );

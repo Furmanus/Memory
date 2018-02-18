@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './../styles/button.css';
 
 export class Button extends React.PureComponent{
 
@@ -10,7 +11,7 @@ export class Button extends React.PureComponent{
             onClick
         } = this.props;
 
-        return <button className='button' type='button' disabled={isDisabled} onClick={onClick}>{buttonText}</button>
+        return <button className='button' type='button' disabled={isDisabled} onClick={onClick}>{buttonText}</button>;
     }
 }
 
@@ -22,4 +23,4 @@ Button.propTypes = {
 Button.defaultProps = {
     buttonText: 'Click',
     isDisabled: false
-}
+};

@@ -1,23 +1,24 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Piece } from '../components/piece';
-import { boardCellClick } from '../actions/action_creator'
+import { boardCellClick, winGame } from '../actions/action_creator'
 
 const mapStateToProps = state => {
 
     return {
-        temporarilyRevealedComponent: state.temporarilyRevealedComponent
-    }
-}
-
+        temporarilyRevealedComponent: state.temporarilyRevealedComponent,
+        hasGameStarted: state.hasGameStarted,
+        preventClickActions: state.preventClickActions
+    };
+};
 const mapDispatchToProps = dispatch => {
 
     return {
-        onBoardCellClick: (clickedElement) => {
-            dispatch(boardCellClick(clickedElement));
+        onBoardCellClick: (clickedElement, temporarilyRevealedComponent) => {
+            dispatch(boardCellClick(clickedElement, temporarilyRevealedComponent));
         }
-    }
-}
+    };
+};
 
 class PieceContainer extends React.Component{
     constructor(props){
@@ -26,21 +27,42 @@ class PieceContainer extends React.Component{
         this.state = {
             isRevealed: false,
             isTemporarilyRevealed: false,
+        };
+
+        this.onClick = this.onClick.bind(this);
+    }
+
+    onClick(){
+        const {
+            onBoardCellClick,
+            temporarilyRevealedComponent,
+            hasGameStarted,
+            preventClickActions
+        } = this.props;
+
+        if(hasGameStarted && !preventClickActions && !this.state.isRevealed && !this.state.isTemporarilyRevealed) {
+            onBoardCellClick(this, temporarilyRevealedComponent);
         }
-        this.onBoardCellClick = this.props.onBoardCellClick.bind(null, this, this.props.temporarilyRevealedComponent);
+    }
+
+    getIcon(){
+        return this.props.icon;
     }
 
     render(){
-        const {icon, onBoardCellClick} = this.props;
+        const {
+            icon,
+            onBoardCellClick,
+        } = this.props;
 
         return (
             <Piece
                 icon={icon}
                 isRevealed={this.state.isRevealed}
                 isTemporarilyRevealed={this.state.isTemporarilyRevealed}
-                onClick={this.onBoardCellClick}
+                onClick={this.onClick}
             />
-        )
+        );
     }
 }
 

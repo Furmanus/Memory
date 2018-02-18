@@ -1,6 +1,10 @@
-export const START_GAME = 'startGame';
-export const RETRY_GAME = 'retryGame';
-export const START_TIMER = 'startTimer';
-export const STOP_TIMER = 'stopTimer';
-export const UPDATE_TIMER = 'updateTimer';
-export const BOARD_CELL_CLICK = 'boardCellClick';
+export const START_GAME = 'START_GAME';
+export const RETRY_GAME = 'RETRY_GAME';
+export const START_TIMER = 'START_TIMER';
+export const STOP_TIMER = 'STOP_TIMER';
+export const UPDATE_TIMER = 'UPDATE_TIMER';
+export const WIN_GAME = 'WIN_GAME';
+export const PAUSE_GAME = 'PAUSE_GAME';
+export const BOARD_CELL_CLICK_FIRST_GUESS = 'BOARD_CELL_CLICK_FIRST_GUESS';
+export const BOARD_CELL_CLICK_SECOND_GUESS = 'BOARD_CELL_CLICK_SECOND_GUESS';
+export const BOARD_CELL_CLICK_CORRECT_GUESS = 'BOARD_CELL_CLICK_CORRECT_GUESS';
